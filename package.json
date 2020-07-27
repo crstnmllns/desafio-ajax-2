@@ -1,0 +1,7 @@
+{
+  "name": "desafio-ajax-dos",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

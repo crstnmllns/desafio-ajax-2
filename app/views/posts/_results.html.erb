@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div id="blogspot-table">
+  <h1>Search</h1>
+    <%= form_tag(posts_path, method: "get", remote: true) do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Enter search term" %>
+      <%= submit_tag "Search" %>
+      <h1>Posts</h1>
+
+      <table id="bands">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render @search_results_posts %>
+        </tbody>
+      </table>
+
+      <br>
+    <% end %>
+</div>
+<div id="search-results">
+
+<div id="new-band">
+  <%= link_to 'New Post', new_post_path, remote: true %>
+</div>
